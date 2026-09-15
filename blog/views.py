@@ -1,11 +1,11 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 def home(request):
-    return render(request, "blog/home.html", {"title": "this is the djangoblog home page"})
+    return render(request, "blog/home.html")
 
 def about(request):
-    return render(request, "blog/about.html", {"title": "this is the djangoblog about page"})
+    return render(request, "blog/about.html", {"team": "DjangoBlog Team"})
 
 def contact(request):
-    return render(request, "blog/contact.html", {"Minh Hung": "this is the djangoblog contact page"})
+    return render(request, "blog/contact.html", {"content": "DjangoBlog Team"})
